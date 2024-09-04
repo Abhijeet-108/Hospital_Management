@@ -1,0 +1,44 @@
+<html>
+ <head>
+  <title>
+   Medilink
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #D2D8FB;
+        }
+  </style>
+ </head>
+ <body class="flex flex-col items-center">
+  {% include 'main.html' %}
+  {% load static %}
+  {% block content %}
+  <main class="w-full flex flex-col items-center mt-0.5">
+   <div class="relative w-3/4">
+    <input class="w-full p-4 rounded-full shadow-lg" placeholder="SEARCH HOSPITAL" type="text"/>
+    <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500">
+    </i>
+   </div>
+   <h2 class="mt-8 text-2xl font-bold text-blue-800 ">
+    "Available Hospitals and Healthcare Facilities"
+   </h2>
+   <div class="mt-8 w-3/4 bg-purple-200 p-4 rounded-lg flex items-center shadow-lg" style="width: 1200px; height: 250px; border-radius: 30px">
+    <img alt="Hospital building illustration" class="rounded-full" style="height: 200px; width: 200px; " src="{% static 'images/hospital.jpeg' %}" width="100"/>
+    <div class="">
+     <!-- Add hospital details here -->
+      <h1 style="font-size: 2rem; font-weight:700; position:absolute; left: 37%; top: 40%;">Agrawal Medical College and Hospital</h1>
+      <p style="font-size: 1.5rem; font-weight:600; position:absolute; left: 39%; top: 50%">Murguru, kolkata, 7885221</p>
+    </div>
+   </div>
+  </main>
+  <button class="fixed bottom-4 right-4 bg-red-500 text-white px-4 py-2 rounded-full" style="width: 80px; height: 80px;">
+   SOS
+  </button>
+  {% endblock %}
+ </body>
+</html>
