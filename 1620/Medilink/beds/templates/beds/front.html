@@ -1,57 +1,160 @@
-<html>
- <head>
-  <title>
-   Medilink
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Medilink
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <style>
    body {
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
             background-color: #D2D8FB;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #D2D8FB;
+        }
+        .header img {
+          width: 250px;
+          height: 80px;
+        }
+        .header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .header .login-signup {
+            background-color: #1e3ce6;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar input {
+            width: 60%;
+            padding: 15px;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .search-bar input::placeholder {
+            color: #b0bec5;
+        }
+        .search-bar i {
+            position: relative;
+            left: -40px;
+            top: 10px;
+            color: #b0bec5;
+        }
+        .content {
+            text-align: center;
+            color: #00020f;
+            font-weight: 700;
+            font-size: 20px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background-color: #eed4f2;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            padding: 20px;
+            text-align: left;
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .card h3 {
+            margin: 0;
+            font-size: 18px;
+            color: black;
+        }
+        .card p {
+            margin: 5px 0 0;
+            color: black;
+        }
+        .sos-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #e57373;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
   </style>
  </head>
- <body class="flex flex-col items-center">
-  {% include 'main.html' %}
+ <body>
+    {% include 'main.html' %}
   {% load static %}
   {% block content %}
-  <main class="w-full flex flex-col items-center mt-0.5">
-   <div class="relative w-3/4">
-    <input class="w-full p-4 rounded-full shadow-lg" placeholder="SEARCH HOSPITAL" type="text"/>
-    <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500">
-    </i>
+  <div class="search-bar">
+   <input placeholder="SEARCH HOSPITAL" type="text"/>
+   <i class="fas fa-search">
+   </i>
+  </div>
+  <div class="content">
+   "Available Hospitals and Healthcare Facilities"
+  </div>
+  <div class="cards">
+   <div class="card">
+    <img alt="Hospital building illustration" height="100" src="{% static 'images/hospital.jpeg' %}" width="100"/>
+    <h3>
+     Agrawal Medical College and Hospital
+    </h3>
+    <p>
+     Murguru, kolkata, 7885221
+    </p>
    </div>
-   <h2 class="mt-8 text-2xl font-bold text-blue-800 ">
-    "Available Hospitals and Healthcare Facilities"
-   </h2>
-   <div style="display: flex">
-   <div class="mt-8 bg-purple-200 rounded-lg flex shadow-lg" style="width: 600px; height: 250px; border-radius: 30px; margin-right:20px">
-    <img alt="Hospital building illustration" class="rounded-full" style="height: 200px; width: 200px; " src="{% static 'images/hospital.jpeg' %}" width="100"/>
-    <div class="">
-     <!-- Add hospital details here -->
-      <h1 style="font-size: 1.3rem; font-weight:700;">Agrawal Medical College and Hospital</h1>
-      <p style="font-size: 1rem; font-weight:600; position:absolute;">Murguru, kolkata, 7885221</p>
-    </div>
+   <div class="card">
+    <img alt="Hospital building illustration" height="100" src="{% static 'images/hospital.jpeg' %}" width="100"/>
+    <h3>
+     Agrawal Medical College and Hospital
+    </h3>
+    <p>
+     Murguru, kolkata, 7885221
+    </p>
    </div>
-   <div class="mt-8 bg-purple-200 rounded-lg flex shadow-lg" style="width: 600px; height: 250px; border-radius: 30px">
-    <img alt="Hospital building illustration" class="rounded-full" style="height: 200px; width: 200px; " src="{% static 'images/hospital.jpeg' %}" width="100"/>
-    <div class="">
-     <!-- Add hospital details here -->
-      <h1 style="font-size: 1.3rem; font-weight:700;">Agrawal Medical College and Hospital</h1>
-      <p style="font-size: 1rem; font-weight:600;">Murguru, kolkata, 7885221</p>
-    </div>
+   <div class="card">
+    <img alt="Hospital building illustration" height="100" src="{% static 'images/hospital.jpeg' %}" width="100"/>
+    <h3>
+     Agrawal Medical College and Hospital
+    </h3>
+    <p>
+     Murguru, kolkata, 7885221
+    </p>
    </div>
   </div>
-  </main>
-  <button class="fixed bottom-4 right-4 bg-red-500 text-white px-4 py-2 rounded-full" style="width: 80px; height: 80px;">
+  <button class="sos-button">
    SOS
   </button>
-{% endblock %}
-  {% comment %}  {% for i in ex %}
-    {{ i }} <br>
-  {% endfor %} {% endcomment %}
+  {% endblock %}
  </body>
 </html>
