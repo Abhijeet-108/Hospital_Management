@@ -1,8 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+#import pandas as pd
+
 # Create your views here.
 
 def home(request):
+#    ex = pd.read_csv("C:\Users\Asus\OneDrive\Desktop\stock1.csv")
+ #   context = {'ex':ex}
     return render(request , 'beds/front.html')
 
 def tery(request):
