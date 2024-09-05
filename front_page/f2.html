@@ -1,0 +1,105 @@
+<html>
+ <head>
+  <title>
+   Login Page
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://placehold.co/800x600/medical?text=Medicine+and+Stethoscope') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #D2D8FB; /* Set background color */
+        }
+        .login-container {
+            width: 250px; /* Reduce the width of the container */
+            height: 350px; /* Reduce the height of the container */
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 100px auto; /* Move the container up */
+            text-align: center;
+            position: relative;
+            left: -200px; /* Move the container further to the left */
+        }
+        .login-container h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #000;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            background: #d3d3d3;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .login-container a {
+            display: block;
+            margin: 10px 0;
+            color: #0000ff;
+            text-decoration: none;
+        }
+        .login-container .forgot-password {
+            text-align: right;
+            margin: 5px 0;
+        }
+        .login-container .signup {
+            color: #0000ff;
+            display: inline;
+        }
+        .login-container p {
+            margin: 60px 0 0; /* Increase margin to move new user and sign up further down */
+        }
+        .login-container .google-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 40px; /* Decrease the margin-top to move the button slightly upward */
+            text-decoration: none;
+            color: #000;
+        }
+        .login-container .google-btn img {
+            width: 20px;
+            margin-right: 10px;
+        }
+  </style>
+ </head>
+ <body>
+    <div class="flex items-center">
+        <img alt="Medilink logo" class="mr-2" src="logo.jpg" style="width: 280px; height: 110px"/>
+       </div>
+  <div class="login-container">
+   <h2>
+    Username
+   </h2>
+   <input placeholder="Enter Username" type="text"/>
+   <h2>
+    Password
+   </h2>
+   <input placeholder="Enter Password" type="password"/>
+   <a class="forgot-password" href="#">
+    Forgot password
+   </a>
+   <p>
+    New user?
+    <a class="signup" href="#">
+     SignUp
+    </a>
+   </p>
+   <a class="google-btn" href="#">
+    <img src="./google-logo-revised.png"alt="Google logo" width="20" height="20"/>
+    Continue with Google
+   </a>
+  </div>
+ </body>
+</html>
