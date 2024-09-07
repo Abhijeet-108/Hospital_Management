@@ -1,4 +1,4 @@
-<script src="https://cdn.tailwindcss.com">
+{% comment %} <script src="https://cdn.tailwindcss.com">
 </script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 <header class="w-full flex justify-between items-center px-4 bg-transparent">
@@ -23,4 +23,28 @@
     <button class="bg-purple-500 text-white px-4 py-2 rounded-full">
      LOGIN / SIGN UP
     </button>
+   </header> {% endcomment %}
+
+
+
+<header class="header">
+    {% load static %}   
+    <img alt="Medilink logo" height="50" src="{% static 'images/logo.jpeg' %}" width="50"/>
+    <nav style="margin-left: 550px;">
+     <a href="#">
+      HOME
+     </a>
+     <a href="#">
+      ABOUT
+     </a>
+     <a href="#">
+      FILTERS
+     </a>
+     <a href="#">
+      CONTACT
+     </a>
+    </nav>
+    <a class="login-signup" href="#">
+     LOGIN / SIGN UP
+    </a>
    </header>

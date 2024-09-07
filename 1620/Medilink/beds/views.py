@@ -6,8 +6,8 @@ from django.http import HttpResponse
 
 def home(request):
 #    ex = pd.read_csv("C:\Users\Asus\OneDrive\Desktop\stock1.csv")
- #   context = {'ex':ex}
-    return render(request , 'beds/front.html')
+    context = {'page': 'Home'}
+    return render(request , 'beds/front.html', context)
 
 def tery(request):
     return render(request , "main.html")
