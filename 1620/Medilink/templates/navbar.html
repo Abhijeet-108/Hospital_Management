@@ -28,23 +28,42 @@
 
 
 <header class="header">
-    {% load static %}   
+    {% load static %} 
+    {% if page == "login" %}  
+    <img alt="Medilink logo" height="50" src="{% static 'images/logo1.jpg' %}" width="50"/>
+    {% else %}
     <img alt="Medilink logo" height="50" src="{% static 'images/logo.jpeg' %}" width="50"/>
+    {% endif %}
     <nav style="margin-left: 550px;">
-     <a href="#">
+     <a href="{% url 'home' %}">
       HOME
      </a>
      <a href="#">
       ABOUT
      </a>
+     {% if page == "login" %}
+
+     {% else %}
      <a href="#">
       FILTERS
      </a>
+     {% endif %}
      <a href="#">
       CONTACT
      </a>
     </nav>
-    <a class="login-signup" href="#">
-     LOGIN / SIGN UP
+    {% if page == "login" %}
+
+    {% else %}
+    {% if request.user.is_authenticated %}
+    <p> Hello {{request.user}} </p>
+    <a class="login-signup" href="{% url "logout" %}">
+     LOGOUT
     </a>
+    {% else %}
+    <a class="login-signup" href="{% url "signin" %}">
+        LOGIN / SIGN UP
+    </a>
+    {% endif %}
+    {% endif %}
    </header>
