@@ -51,3 +51,15 @@ def registerPage(request):
 def logoutPage(request):
     logout(request)
     return redirect("home")
+
+def admin1(request):
+    context = {'page': 'admin1'}
+    return render(request , 'beds/admin.html', context)
+
+def booking(request):
+    context = {'page': 'booking'}
+    return render(request , 'beds/booking.html', context)
+
+def hospital_detail(request, hospital_name):
+    context = {'hospital_name': hospital_name}
+    return render(request, 'beds/booking.html', context)

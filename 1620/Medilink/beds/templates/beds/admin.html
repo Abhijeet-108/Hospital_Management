@@ -1,0 +1,213 @@
+
+{% block content %}
+{% load static %}
+<style>
+    body {
+             font-family: Arial, sans-serif;
+             margin: 0;
+             padding: 0;
+             background-color: #f5f5f5;
+         }
+         .header {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             padding: 10px 20px;
+             background-color: white;
+             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         }
+         .header img {
+             height: 30px; 
+         }
+         .header nav a {
+             margin: 0 15px;
+             text-decoration: none;
+             color: black;
+             font-weight: bold;
+         }
+         .sidebar {
+             width: 200px;
+             background-color: #2c3e50; 
+             padding: 20px;
+             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+             height: 87vh;
+             position: fixed;
+             margin-left: 5px;
+             margin-top: 3px;
+         }
+         .sidebar img {
+             height: 50px; 
+             width: 50px;
+             border-radius: 50%; 
+             display: block;
+             margin: 0 auto 20px auto;
+         }
+         .sidebar hr {
+             border: 0;
+             height: 1px;
+             background: #ccc;
+             margin: 20px 0;
+         }
+         .sidebar h2 {
+             font-size: 18px;
+             margin-bottom: 30px; 
+             text-align: center;
+             color: white; 
+         }
+         .sidebar a {
+             display: block;
+             margin: 20px 0; 
+             text-decoration: none;
+             color: white; 
+         }
+         .sidebar a:hover {
+             color: black;
+         }
+         .sidebar .logout {
+             margin-top: 40px; 
+             /* margin-right: 40px;
+             text-align: center; */
+             color: red;
+         }
+         .main-content {
+             margin-left: 240px;
+             padding: 20px;
+             display: flex;
+             justify-content: space-between;
+         }
+         .card {
+             background-color: white;
+             padding: 20px;
+             border-radius: 10px;
+             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+             margin-bottom: 20px;
+         }
+         .card h3 {
+             margin-top: 0;
+             text-align: left; 
+         }
+         .button {
+             display: inline-block;
+             padding: 10px 20px;
+             margin: 10px 0;
+             background-color: white;
+             border-radius: 10px;
+             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+             text-align: center;
+             cursor: pointer;
+         }
+         .button:hover {
+             border: 1px solid #00f;
+         }
+         .analytics {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             padding: 20px; 
+             width: 300px; 
+             height: 300px; 
+             margin-left: 20px; 
+         }
+         .analytics h3 {
+             align-self: flex-start; 
+         }
+         .analytics img {
+             width: 100%;
+             height: 400px; 
+             object-fit: cover; 
+         }
+         .right-side {
+             display: flex;
+             flex-direction: column;
+             align-items: flex-end;
+         }
+         .right-side .analytics {
+             align-items: flex-end;
+             margin-top: 20px; 
+         }
+         .main-card {
+             width: 700px;
+             height: 500px; 
+             margin-top: 10px; 
+         }
+         .button-container {
+             display: flex;
+             flex-direction: column;
+             align-items: flex-end;
+             margin-top: -20px; 
+         }
+   </style>
+  </head>
+  <body>
+   <div class="header">
+    <img alt="Medilink Logo" height="130" src="{% static 'images/logo1.jpg' %}" width="250"/>
+    <nav>
+     <a href="#">
+      HOME
+     </a>
+     <a href="./about.html">
+      ABOUT
+     </a>
+     <a href="./contact.html">
+      CONTACT
+     </a>
+    </nav>
+   </div>
+   <div class="sidebar" style="background-color: #2c3e50; border-radius: 30px;">
+    <img alt="Profile Picture" height="50" src="./f3_hos.jpg" width="50" style="border-radius: 50%;"/>
+    <hr>
+    <h2 style="color: white;">
+     Dashboard
+    </h2>
+    <a href="#">
+     Availability
+    </a>
+    <a href="#">
+     Inventory
+    </a>
+    <a href="./BLOOD.html">
+     Blood Bank
+    </a>
+    <a href="#">
+     Notification
+    </a>
+    <a href="#">
+     Settings
+    </a>
+    <a class="logout" href="./front.html">
+     LOG OUT
+    </a>
+   </div>
+   <div class="main-content">
+    <div class="card main-card" style="border-radius: 30px;">
+     <h3>
+      Agrawal Medical College &amp; Hospital
+     </h3>
+     <p>
+      Details: 
+      <p>Name: Agarwal Medical College & Hospital</p>
+      <p>Email: xyz@gmail.com</p>
+      <p>Contact: +911234567892</p>
+      <p>Description: This is very good hospital</p>
+     </p>
+    </div>
+    <div class="right-side">
+     <div class="button-container">
+      <div class="button" >
+       Booking
+      </div>
+      <a href="./Doctor.html">
+      <div class="button" >
+       Doctors
+      </div>
+      </a>
+     </div>
+     <div class="card analytics" style="width: 350px; height: 300px; margin-left: 20px; border-radius: 30px;">
+      <h3 style="align-self: flex-start;">
+       Analytics
+      </h3>
+       <img alt="Analytics Graph" src="#" style="width: 100%; height: 200px; object-fit: cover;"/>  <!--INSERT GRAPH HERE -->
+     </div>
+    </div>
+   </div>
+{% endblock %}

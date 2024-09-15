@@ -125,31 +125,37 @@
   </div>
   <div class="cards">
    <div class="card">
-    <img alt="Hospital building illustration" height="100" src="hosp.jpg" width="100"/>
-    <h3>
-     Agrawal Medical College and Hospital
-    </h3>
-    <p>
-     Murguru, kolkata, 7885221
-    </p>
+    <a href="{% url 'hospital_detail' hospital_name='Agrawal Medical College and Hospital' %}">
+        <img alt="Hospital building illustration" height="100" src="{% static 'images/hospital.jpeg' %}" width="100"/>
+        <h3>
+        Agrawal Medical College and Hospital
+        </h3>
+        <p>
+        Murguru, kolkata, 7885221
+        </p>
+    </a>
    </div>
    <div class="card">
-    <img alt="Hospital building illustration" height="100" src="{% static 'images/hospital.jpeg' %}" width="100"/>
-    <h3>
-     Agrawal Medical College and Hospital
-    </h3>
-    <p>
-     Murguru, kolkata, 7885221
-    </p>
+    <a href="{% url 'hospital_detail' hospital_name='Poddar Medical College and Hospital' %}">
+        <img alt="Hospital building illustration" height="100" src="{% static 'images/hospital.jpeg' %}" width="100"/>
+        <h3>
+        Poddar Medical College and Hospital
+        </h3>
+        <p>
+        Murguru, kolkata, 7885221
+        </p>
+    </a>
    </div>
    <div class="card">
-    <img alt="Hospital building illustration" height="100" src="{% static 'images/hospital.jpeg' %}" width="100"/>
-    <h3>
-     Agrawal Medical College and Hospital
-    </h3>
-    <p>
-     Murguru, kolkata, 7885221
-    </p>
+    <a href="{% url 'hospital_detail' hospital_name='Agrawal Medical College and Hospital' %}">
+        <img alt="Hospital building illustration" height="100" src="{% static 'images/hospital.jpeg' %}" width="100"/>
+        <h3>
+        Sindi Medical College and Hospital
+        </h3>
+        <p>
+        Murguru, kolkata, 7885221
+        </p>
+    </a>
    </div>
   </div>
   <button class="sos-button">
