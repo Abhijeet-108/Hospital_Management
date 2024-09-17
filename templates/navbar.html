@@ -1,0 +1,87 @@
+<script src="https://cdn.tailwindcss.com">
+</script>
+{% if page == "admin" %}
+<style>
+.nav1{
+    background: white;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+</style>
+{% endif %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<header class="nav1 w-full flex justify-between items-center px-4 ">
+    <div class="flex items-center">
+    {% load static %}   
+    {% if page == "user" %}
+    <img alt="Medilink logo" class="mr-2" src="{% static 'images/log.jpeg' %}" style="width: 280px; height: 110px"/>
+    {% else %}
+    <img alt="Medilink logo" class="mr-2" src="{% static 'images/logo1.jpg' %}" style="width: 280px; height: 110px"/>
+    {% endif %}
+    </div>
+    <nav class="flex space-x-4 " style="margin: 0px 0px 0px 500px ; font-weight:700;">
+     
+    {% if page == "user" %}
+    <a class="text-black" href="{% url 'home' %}">
+      HOME
+     </a>
+     {% elif page == "admin" %}
+     <a class="text-black" href="{% url 'hospital-admin' %}">
+        HOME
+       </a>  
+    {% else %}
+    <a class="text-black" href="{% url 'home' %}">
+        HOME
+       </a>  
+     {% endif %}
+     <a class="text-black" href="#">
+      ABOUT
+     </a>
+     {% if page == 'user' %}
+     <a class="text-black" href="#">
+        FILTERS
+       </a>
+     {% endif %}
+     <a class="text-black" href="#">
+      CONTACT
+     </a>
+    </nav>
+    {% if page == 'login' %}
+    
+    {% elif page == "signup" %}
+
+    {% elif page == "admin" %}
+    
+    {% else %}
+
+    {% if request.user.is_authenticated %}
+    <ul><button onclick="log()"> <img alt="Profile Picture" height="50" src="{% static 'images/hospital1.jpeg' %}" width="50" style="border-radius: 50%;"/> </button></ul>
+    <ul><div style="display: none; border: 1px dotted ; background-color: azure;" id = "log">
+    <p>Hello {{request.user}}</p>
+    <a href="{% url 'logout' %}"> 
+        <button type="submit" class="bg-purple-500 text-white px-4 py-2 rounded-full">
+        LOGOUT 
+        </button>  
+    </a>
+    </div>
+    </ul>
+    {% else %}
+    <a href="{% url 'signin' %}"> 
+        <button type="submit" class="bg-purple-500 text-white px-4 py-2 rounded-full width:40px height:30px">
+        LOGIN / SIGN UP 
+        </button>  
+    </a>
+    {% endif %}
+    {% endif %}
+</header>
+<script>
+function log(){
+    if (document.getElementById("log").style.display == "block") {
+        document.getElementById("log").style.display = "none";
+    }
+    else{
+    document.getElementById("log").style.display = "block";
+}
+}
+</script>

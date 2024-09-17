@@ -1,0 +1,15 @@
+{% include 'main.html' %}
+
+{% block content %}
+
+<form method="POST" , action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" , value="Register"/>
+</form>
+<div style="border: dotted 1px;">
+    <p>Already Signed Up?</p>
+    <a href="{% url 'signin' %}">Login</a>
+</div>
+
+{% endblock %}

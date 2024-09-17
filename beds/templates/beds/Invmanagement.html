@@ -1,0 +1,223 @@
+<html></html>
+<head>
+    <title>INVENTRY Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            margin-bottom: 20px; 
+            background-color: #444;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #555;
+        }
+        .search-bar2 {
+                 display: flex;
+                 justify-content: center;
+                 margin: 20px 0;
+             }
+             .search-bar2 input {
+                 width: 60%;
+                 padding: 15px;
+                 border-radius: 30px;
+                 border: none;
+                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+             }
+             .search-bar2 input::placeholder {
+                 color: #b0bec5;
+             }
+             .search-bar2 i {
+                 position: relative;
+                 left: -40px;
+                 top: 10px;
+                 color: #b0bec5;
+             }
+        .main-content2 {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-left: 1px solid #ccc;
+        }
+        .main-content2 h1 {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .buttons2 {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .buttons2 button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: 1px solid #333;
+            background-color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .buttons2 button:hover {
+            background-color: #f0f0f0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px dashed #333;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Dashboard</h2>
+            <a href="./Dosti.html">Home</a>
+            <a href="./Avail.html">Availability</a> 
+            <a href="Invmanagement.html">Inventry</a>
+            <a href="./BLOOD.html">Blood Bank</a> 
+            <a href="#">Settings</a>
+            <a href="./index.html">Logout</a>
+        </div>
+        <div class="main-content2">
+            <h1>Inventery Management</h1>
+            <div class="buttons2">
+                <button>Add</button>
+                <button>Edit</button>
+                <button>Delete</button>
+                <button>FILE</button>
+            </div>
+            <div class="search-bar2">
+                <input placeholder="SEARCH MEDICINE" type="text"/>
+                <i class="fas fa-search">
+                </i>
+               </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>Availability</th>
+                        <th>QUANTITY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Acetaminophen</td>
+                        <td>Yes</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Amoxicillin</td>
+                        <td>No</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Azithromycin</td>
+                        <td>Yes</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Ciprofloxacin</td>
+                        <td>No</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Clotrimazole</td>
+                        <td>Yes</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Cetirizine </td>
+                        <td>No</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Diphenhydramine</td>
+                        <td>Yes</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Dexamethasone</td>
+                        <td>No</td>
+                        <td>0</td>
+                    </tr>
+                    <tr></tr>
+                        <td>Estrogen</td>
+                        <td>Yes</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Fluoxetine </td>
+                        <td>No</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Glipizide</td>
+                        <td>Yes</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Heparin</td>
+                        <td>No</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Hydrocortisone</td>
+                        <td>Yes</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Insulin</td>
+                        <td>No</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Vitamin C</td>
+                        <td>Yes</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Vitamin D</td>
+                        <td>No</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

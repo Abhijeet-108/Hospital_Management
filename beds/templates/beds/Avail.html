@@ -1,0 +1,337 @@
+<html></html>
+ <head>
+  <title>
+   Medilink Availability
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            height:100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            /* box-shadow: 2px 0 5px rgba(0,0,0,0.1); */
+            /* height: 100vh; */
+        }
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            display: block;
+            padding:10px;
+            margin-bottom: 20px;
+            background-color: #444;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            /* margin: 10px 0;
+            font-size: 18px; */
+        }
+        .sidebar a:hover {
+            background-color: #555;
+            /* text-decoration: underline; */
+        }
+        /* .sidebar .logout {
+            margin-top: 20px;
+            font-size: 16px;
+            color: gray;
+        } */
+        .main-content11 {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        /* .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header img {
+            height: 50px;
+        }
+        .header nav a {
+            margin: 0 10px;
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .header nav a:hover {
+            text-decoration: underline;
+        } */
+        .content1 {
+            margin-top: 20px;
+        }
+        .content1 h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .dropdown1 {
+            display: inline-block;
+            position: relative;
+            margin: 10px 0;
+        }
+        .dropdown1 button {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .dropdown1 button i {
+            margin-left: 10px;
+        }
+        .buttons1 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .buttons1 button {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: orange;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; 
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <!-- <div class="header">
+   <img alt="Medilink Logo" height="50" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-75EzHED3TNbtKaUDPQ7AgZXt.png?st=2024-09-08T13%3A19%3A15Z&amp;se=2024-09-08T15%3A19%3A15Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-07T21%3A58%3A25Z&amp;ske=2024-09-08T21%3A58%3A25Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=IAdBOZen6Z3LJAIiD55TyF0kGybXtxT06VwbQR%2BKOb4%3D" width="100"/>
+   <nav>
+    <a href="#">
+     HOME
+    </a>
+    <a href="#">
+     ABOUT
+    </a>
+    <a href="#">
+     CONTACT
+    </a>
+   </nav>
+  </div> -->
+  <div class="container">
+   <div class="sidebar">
+    <h2>
+     Dashboard
+    </h2>
+    <a href="./Dosti.html">
+      Home
+    </a>
+    <a href="./Avail.html">
+     Availability
+    </a>
+    <a href="./Invmanagement.html">
+     Inventory
+    </a>
+    <a href="./BLOOD.html">
+     Blood Bank
+    </a>
+    <a href="#">
+     Settings
+    </a>
+    <a href="./index.html">
+     Log out
+     </a>
+   </div>
+   <div class="main-content1">
+    <div class="content1" style="text-align: center;">
+     <h1>
+      Availability
+     </h1>
+     <div class="dropdown1" style="margin-left: 50px; margin-right: 50;margin-top: 50px;">
+      <button id="bedsBtn1">
+       Beds
+       <i class="fas fa-caret-down">
+       </i>
+      </button>
+     </div>
+     <div class="dropdown1">
+      <button id="ambulanceBtn1" style="margin-left: 100px; margin-right: 50;margin-top: 50px;">
+       Ambulance
+       <i class="fas fa-caret-down">
+       </i>
+      </button>
+     </div>
+     <div class="dropdown1">
+      <button id="laboratoryBtn1" style="margin-left: 100px; margin-right: 50px;margin-top: 50px;">
+       Laboratory
+       <i class="fas fa-caret-down">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="modal" id="bedsModal">
+   <div class="modal-content">
+    <span class="close" id="closeBedsModal">&times;</span>
+    <h2>Category of beds</h2>
+    <div class="buttons1">
+      <button>Single
+        <input placeholder="Number" type="text"/>
+      </button>
+      <button>Double
+        <input placeholder="Number" type="text"/>
+      </button>
+      <button>Four
+        <input placeholder="Number" type="text"/>
+      </button>
+      <button>Multi
+        <input placeholder="Number" type="text"/>
+      </button>
+      <button>Opdis
+        <input placeholder="Number" type="text"/>
+      </button>
+    </div>
+   </div>
+  </div>
+  <div class="modal" id="ambulanceModal">
+   <div class="modal-content">
+    <span class="close" id="closeAmbulanceModal">&times;</span>
+    <h2>Number:</h2>
+    <div class="buttons">
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+      <input placeholder="Number" type="text"/>
+    </div>
+   </div>
+  </div>
+  <div class="modal" id="laboratoryModal">
+   <div class="modal-content">
+    <span class="close" id="closeLaboratoryModal">&times;</span>
+    <h2>Laboratory</h2>
+    <div class="buttons">
+      <button>MRI</button>
+      <button>CT Scan</button>
+      <button>X-ray</button>
+      <button>Ventilator</button>
+    </div>
+   </div>
+  </div>
+  <script>
+        var bedsModal = document.getElementById("bedsModal");
+        var ambulanceModal = document.getElementById("ambulanceModal");
+        var laboratoryModal = document.getElementById("laboratoryModal");
+
+        var bedsBtn = document.getElementById("bedsBtn1");
+        var ambulanceBtn = document.getElementById("ambulanceBtn1");
+        var laboratoryBtn = document.getElementById("laboratoryBtn1");
+
+        var closeBedsModal = document.getElementById("closeBedsModal");
+        var closeAmbulanceModal = document.getElementById("closeAmbulanceModal");
+        var closeLaboratoryModal = document.getElementById("closeLaboratoryModal");
+
+        bedsBtn1.onclick = function() {
+            bedsModal.style.display = "block";
+        }
+        ambulanceBtn1.onclick = function() {
+            ambulanceModal.style.display = "block";
+        }
+        laboratoryBtn1.onclick = function() {
+            laboratoryModal.style.display = "block";
+        }
+
+        closeBedsModal.onclick = function() {
+            bedsModal.style.display = "none";
+        }
+        closeAmbulanceModal.onclick = function() {
+            ambulanceModal.style.display = "none";
+        }
+        closeLaboratoryModal.onclick = function() {
+            laboratoryModal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == bedsModal) {
+                bedsModal.style.display = "none";
+            }
+            if (event.target == ambulanceModal) {
+                ambulanceModal.style.display = "none";
+            }
+            if (event.target == laboratoryModal) {
+                laboratoryModal.style.display = "none";
+            }
+        }
+  </script>
+ </body>
+</html>
